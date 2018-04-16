@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.doctor.AgreeSignActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/choose_sign_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_white_grey_switcher"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约日期"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/sign_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="请选择签约时间" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约地点"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="淳安县第一人民医院" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约医生"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="李国豪" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="医生电话"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="166 7788 9126" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约病人"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="汤灿华" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="病人电话"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="133 9876 3456" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_8"
+        android:text="请确保手机畅通，以便病人随时联系您" />
+
+    <Button
+        android:id="@+id/agree_sign"
+        style="@style/primary_btn_style"
+        android:text="确认并发送" />
+</LinearLayout>

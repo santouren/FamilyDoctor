@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.patient.OutpatientListActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/member_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        cube_ptr:tabGravity="fill"
+        cube_ptr:tabIndicatorColor="@color/light_blueA700"
+        cube_ptr:tabMode="fixed"
+        cube_ptr:tabSelectedTextColor="@color/light_blueA700"
+        cube_ptr:tabTextColor="@color/grey_100" />
+
+    <include layout="@layout/common_error" />
+
+    <RelativeLayout
+        android:id="@id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <in.srain.cube.views.ptr.PtrFrameLayout
+            android:id="@+id/ptrFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close="300"
+            cube_ptr:ptr_duration_to_close_header="2000"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/outpatient_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </in.srain.cube.views.ptr.PtrFrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

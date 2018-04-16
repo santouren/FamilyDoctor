@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:paddingLeft="12dp"
+        android:text="G" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_4"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_4">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/temp_doctor_header" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="病人名字"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_4"
+            android:drawableRight="@drawable/goto_gray"
+            android:gravity="end"
+            android:paddingRight="@dimen/dp_8"
+            android:text="门诊转诊" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+</LinearLayout>

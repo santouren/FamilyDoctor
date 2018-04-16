@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey300"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/search_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/circular_corner_white"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_6"
+        android:paddingLeft="120dp"
+        android:paddingRight="120dp"
+        android:paddingTop="@dimen/dp_6"
+        android:text="搜索医生"
+        android:textSize="@dimen/subhead" />
+</RelativeLayout>

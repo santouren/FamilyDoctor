@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="72dp"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/hospital_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/hospital_default" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/hospital_grade"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@color/black_54"-->
+        <!--android:gravity="center"-->
+        <!--android:text="县中医院"-->
+        <!--android:textColor="@color/white_87" />-->
+</FrameLayout>

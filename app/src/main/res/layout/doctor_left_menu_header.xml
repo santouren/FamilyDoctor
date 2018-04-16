@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blueA400"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_14">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/doctor_header"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/default_portrait"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="医生名字"
+            android:textSize="@dimen/subhead" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_14"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/doctor_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableTop="@drawable/user_info"
+                android:gravity="center"
+                android:text="基本资料"
+                android:textColor="@color/white"
+                android:textSize="@dimen/caption" />
+
+            <TextView
+                android:id="@+id/modify_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableTop="@drawable/password_white"
+                android:gravity="center"
+                android:text="修改密码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/caption" />
+
+            <TextView
+                android:id="@+id/identity_authentication"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableTop="@drawable/registration"
+                android:gravity="center"
+                android:text="身份认证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/caption" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/clear_cache"
+        style="@style/primary_tv_style"
+        android:text="清除缓存数据" />
+
+    <TextView
+        android:id="@+id/about_us"
+        style="@style/primary_tv_style"
+        android:text="关于我们" />
+
+    <TextView
+        android:id="@+id/contact_us"
+        style="@style/primary_tv_style"
+        android:text="联系我们" />
+
+    <Button
+        android:id="@+id/exit_app"
+        style="@style/primary_btn_style"
+        android:text="退出" />
+
+</LinearLayout>

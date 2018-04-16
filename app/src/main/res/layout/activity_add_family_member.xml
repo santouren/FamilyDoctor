@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.AddFamilyMemberActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关系"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/family_relation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:drawableEnd="@drawable/ic_go_black"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|end"
+            android:hint="请选择关系" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/member_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="请输入姓名"
+            android:paddingEnd="16sp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="身份证号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/identity_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="end"
+            android:hint="请输入身份证号码"
+            android:inputType="number"
+            android:maxLength="18"
+            android:paddingEnd="16sp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFF9600">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:text="本人手机号码：123****8912        联系人手机号：无联系人手机号"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="市民卡"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/citizen_card_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            android:gravity="end"
+            android:hint="请填写家人市民卡"
+            android:inputType="number"
+            android:paddingEnd="16sp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="民族"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/ethnic_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:drawableEnd="@drawable/ic_go_black"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|end"
+            android:hint="请选择民族" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/common_line_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="家庭地址"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/family_address_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="请填写家人家庭住址"
+            android:paddingEnd="16sp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/common_line_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手机号码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/phone_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingEnd="16sp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="*"
+            android:textColor="@color/redA400"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dp_12"
+            android:text="验证码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <EditText
+            android:id="@+id/verification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/left_circular_corner_white"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/get_verification"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:background="@color/blue_100"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line_horizontal" />
+
+    <Button
+        android:id="@+id/add_member"
+        style="@style/primary_btn_style"
+        android:text="提交并增加"
+        android:visibility="gone" />
+</LinearLayout>

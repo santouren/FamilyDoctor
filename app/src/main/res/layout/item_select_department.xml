@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/department_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_white_grey_switcher"
+        android:drawableRight="@drawable/ic_go_black"
+        android:padding="12dp"
+        android:text="科室"
+        android:textColor="@color/black_87"
+        android:textSize="16sp" />
+</RelativeLayout>

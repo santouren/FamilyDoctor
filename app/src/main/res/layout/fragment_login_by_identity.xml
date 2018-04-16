@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey200"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/identity_id"
+        style="@style/register_et_style"
+        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:drawableLeft="@drawable/card_icon"
+        android:hint="请输入手机号或身份证号"
+        android:inputType="number"
+        android:maxLength="18"
+        android:textSize="@dimen/subhead" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/register_et_style"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:drawableLeft="@drawable/password_icon"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="@dimen/subhead" />
+
+    <Button
+        android:id="@+id/login"
+        style="@style/primary_btn_style"
+        android:text="登录" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="没有账号，" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:padding="10dp"
+            android:text="立即注册>>"
+            android:textColor="@color/blueA400" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/retrieve_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="end"
+            android:text="找回密码"
+            android:textColor="@color/blueA400" />
+    </LinearLayout>
+</LinearLayout>

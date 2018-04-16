@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_title_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_dianji"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorFDFEE3"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/laba" />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_shengji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@+id/imageView"
+                        android:text="立即升级最新版淳医点点通客户端"
+                        android:textColor="@color/colorFEB561" />
+
+                    <LinearLayout
+                        android:id="@+id/guanbi"
+                        android:gravity="center"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/guanbi" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:src="@drawable/notification" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/grey_38" />
+
+                    <ViewFlipper
+                        android:id="@+id/notification_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:flipInterval="3000"
+                        android:inAnimation="@anim/translate_vertical_in"
+                        android:outAnimation="@anim/translate_vertical_out" />
+                </LinearLayout>
+
+                <include layout="@layout/common_bar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/order_registration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_order"
+                        android:gravity="center"
+                        android:text="预约挂号" />
+
+                    <TextView
+                        android:id="@+id/cloud_images"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_cloud_images"
+                        android:gravity="center"
+                        android:text="检查报告" />
+
+                    <TextView
+                        android:id="@+id/cloud_inspection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_cloud_inspection"
+                        android:gravity="center"
+                        android:text="检验报告" />
+
+                    <TextView
+                        android:id="@+id/outpatient_prescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_outpatient_prescription"
+                        android:gravity="center"
+                        android:text="门诊处方" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/queue_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_queue_call"
+                        android:gravity="center"
+                        android:text="排队叫号" />
+
+                    <TextView
+                        android:id="@+id/family_record"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_family_record"
+                        android:gravity="center"
+                        android:text="家庭档案" />
+
+                    <TextView
+                        android:id="@+id/call_doctor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_call_doctor"
+                        android:gravity="center"
+                        android:text="医保政策" />
+
+                    <TextView
+                        android:id="@+id/unify_pay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/ic_unify_pay"
+                        android:gravity="center"
+                        android:text="统一支付" />
+                </LinearLayout>
+
+                <include layout="@layout/common_bar" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_specialist"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_10"
+                    android:text="专家坐诊"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <include layout="@layout/common_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hospital_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:drawableTop="@drawable/hospital_1"
+                        android:gravity="center"
+                        android:text="县一医院"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/hospital_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:drawableTop="@drawable/hospital_2"
+                        android:gravity="center"
+                        android:text="县二医院"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/hospital_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:drawableTop="@drawable/hospital_3"
+                        android:gravity="center"
+                        android:text="县中医院"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/hospital_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:drawableTop="@drawable/hospital_4"
+                        android:gravity="center"
+                        android:text="妇幼保院"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <include layout="@layout/common_bar" />
+
+                <ImageView
+                    android:id="@+id/family_doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/temp_ad1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/to_hz_health"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/temp_ad2" />
+
+                    <ImageView
+                        android:id="@+id/to_hz_smk"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/temp_ad3" />
+
+                </LinearLayout>
+
+                <include layout="@layout/common_bar" />
+
+                <LinearLayout
+                    android:id="@+id/more_health_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_health_news"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="健康资讯"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:drawableRight="@drawable/ic_go_grey"
+                        android:text="更多" />
+                </LinearLayout>
+
+                <include layout="@layout/common_line_horizontal" />
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/hot_news_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+                <include layout="@layout/home_health_news" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

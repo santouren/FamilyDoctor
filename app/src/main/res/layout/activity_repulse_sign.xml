@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.doctor.RepulseSignActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="病人姓名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="汤灿华" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约套餐"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="健康评估" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_grey_content_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签约结果"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:text="拒绝"
+            android:textColor="@color/red_100" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/repulse_reason"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@drawable/bg_blue_border_transparent_content"
+        android:gravity="start"
+        android:hint="请填写拒绝理由（必填）"
+        android:padding="@dimen/dp_4"
+        android:textSize="@dimen/body" />
+
+    <Button
+        android:id="@+id/repulse_sign"
+        style="@style/primary_btn_style"
+        android:text="确认并发送" />
+</LinearLayout>

@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/light_blueA200</item>
+        <item name="colorPrimaryDark">@color/light_blueA400</item>
+        <item name="colorAccent">@color/green_100</item>
+    </style>
+
+    <style name="HealthAppTheme" parent="AppTheme" />
+
+    <!--全屏显示主题-->
+    <style name="ThemeFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 主页面按钮样式 -->
+    <style name="main_btn_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/dp_6</item>
+        <item name="android:textSize">@dimen/caption</item>
+        <item name="android:paddingBottom">@dimen/dp_6</item>
+        <item name="android:drawablePadding">@dimen/dp_2</item>
+        <item name="android:textColor">@color/gray_blue_switcher</item>
+    </style>
+
+    <!-- 注册/登录页面文本EditText样式 -->
+    <style name="register_et_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:background">@drawable/circular_corner_white</item>
+        <item name="android:drawablePadding">@dimen/dp_6</item>
+        <item name="android:padding">@dimen/dp_8</item>
+    </style>
+
+    <!-- TextInputEditText自定义样式 -->
+    <style name="input_style">
+        <!--底部线 默认颜色-->
+        <item name="colorControlNormal">@color/green_100</item>
+        <!--底部线 EditText激活时颜色-->
+        <item name="colorControlActivated">@color/green_100</item>
+        <!--设置光标-->
+        <item name="android:textCursorDrawable">@color/green_100</item>
+    </style>
+
+    <!--通用按钮样式-->
+    <style name="primary_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:background">@drawable/btn_bg_switcher</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--通用文本条样式-->
+    <style name="primary_tv_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_bottom_white_grey_switcher</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawableRight">@drawable/goto_gray</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!--loading dialog-->
+    <style name="WinDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- 个人中心页面选项条文本TextView样式 -->
+    <style name="tv_style_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:drawableRight">@drawable/ic_go_black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black_100</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/bg_bottom_white_grey_switcher</item>
+    </style>
+
+    <!-- 横向文本图标按钮TextView样式 -->
+    <style name="tv_style_2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

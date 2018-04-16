@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.doctor.IdentityAuthenticationActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:id="@+id/page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="330892188301042835" />
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@drawable/circular_corner_black_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="身份证正面（请保持证件照清晰）"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <ImageView
+                    android:id="@+id/identity_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:src="@drawable/identity_front" />
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@drawable/circular_corner_black_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="身份证反面（请保持证件照清晰）"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <ImageView
+                    android:id="@+id/identity_contrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:src="@drawable/identity_contrary" />
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@drawable/circular_corner_black_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="医师执业证（请保持证件照清晰）"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <ImageView
+                    android:id="@+id/doctor_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_8"
+                    android:src="@drawable/doctor_certificate" />
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/primary_btn_style"
+                android:text="提交" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/page2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/identity_authentication" />
+
+        <TextView
+            android:id="@+id/data_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:gravity="center"
+            android:text="已提交"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/state_declare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="审核人员将尽快审核，审核结果将会以短信的形式通知到您的手机（155XXXX1672）\n请您耐心等待..." />
+
+        <Button
+            android:id="@+id/ok"
+            style="@style/primary_btn_style"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="修改个人信息" />
+    </LinearLayout>
+</LinearLayout>

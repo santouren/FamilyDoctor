@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_blue_border_transparent_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/hospital_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入医院名称"
+            android:textSize="@dimen/body" />
+
+        <ImageView
+            android:id="@+id/start_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/choice_hospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_18"
+        android:drawableLeft="@drawable/hospital_choice"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableRight="@drawable/goto_gray"
+        android:gravity="center_vertical"
+        android:hint="请选择医院"
+        android:padding="@dimen/dp_6"
+        android:textSize="@dimen/subhead" />
+
+    <TextView
+        android:id="@+id/choice_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_18"
+        android:drawableLeft="@drawable/department_choice"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableRight="@drawable/goto_gray"
+        android:gravity="center_vertical"
+        android:hint="请选择科室"
+        android:padding="@dimen/dp_6"
+        android:textSize="@dimen/subhead" />
+
+    <Button
+        android:id="@+id/go_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/circular_corner_blue"
+        android:text="立即挂号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/my_queue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/my_queue_num"
+            android:gravity="center"
+            android:text="我的排队"
+            android:textColor="@color/blue_100"
+            android:textSize="@dimen/subhead" />
+
+        <TextView
+            android:id="@+id/department_queue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/department_queue_num"
+            android:gravity="center"
+            android:text="科室排队"
+            android:textColor="@color/blue_100"
+            android:textSize="@dimen/subhead" />
+
+    </LinearLayout>
+</LinearLayout>

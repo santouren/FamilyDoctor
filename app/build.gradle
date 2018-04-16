@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.cpinfo.familydoctor"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 109
+        versionName "1.0.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        //筛出融云视频仅支持的so文件类型
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Android Material Design 兼容库
+    //Retrofit
+    //Retrofit变换器
+    //Retrofit拦截器，打印json字符串数据
+    //Log工具
+    //baseAdapter（临时使用，后期全部替换recycleview）
+    //android-Ultra-Pull-To-Refresh
+    //Glide
+    //glide扩展库（支持高斯模糊等）
+    //CardView
+    //圆形头像
+    //EventBus
+    //material-dialogs
+    //星级评分条
+    //PhotoView
+    // 文本滚动切换库
+    //字母索引库(后期可能弃用该功能)
+    //BaseRecyclerViewAdapterHelper
+    //时间选择器
+    //相册，拍照
+    //PDFView
+    //ButterKnife依赖
+    compile project(':CallKit')
+    //okhttputils临时使用
+    //角标库
+    //广告条轮播库
+    //web封装库
+    // compile files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.zhy:base-adapter:3.0.3'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.3'
+    compile 'me.zhanghai.android.materialratingbar:library:1.0.2'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'com.sunfusheng:marqueeview:1.2.0'
+    compile 'com.gjiazhe:wavesidebar:1.3'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.15'
+    compile 'com.wdullaer:materialdatetimepicker:3.2.0'
+    compile 'com.yanzhenjie:album:1.0.6'
+    compile 'com.github.barteksc:android-pdf-viewer:2.5.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.just.agentweb:agentweb:1.2.2'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}

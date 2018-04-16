@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cpinfo.familydoctor">
+
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 访问精确定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入外部存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 安装卸载文件系统 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 修改音频设置 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 读取启动设置 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 唤醒锁屏，音视频通话所需 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 开机自启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- WiFi状态切换权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 极光推送 增加的配置1 start -->
+    <!-- Required -->
+    <permission
+        android:name="com.cpinfo.familydoctor.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.cpinfo.familydoctor.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 极光推送 增加的配置1 end -->
+    <application
+        android:name=".FamilyDoctorApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/HealthAppTheme">
+
+        <!-- 融云IM配置 start -->
+        <!-- 高德地图（appkey临时使用，正式上线前请申请替换） -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e09af6a2b26c02086e9216bd07c960ae" />
+        <!-- 友盟key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a337b22b27b0a4f6a00004c" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cpinfo.familydoctor.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+        <!-- 融云IM配置 end -->
+
+
+        <!-- 融云相关页面start -->
+        <!-- 在线咨询会话界面 -->
+        <activity
+            android:name=".im.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.cpinfo.familydoctor"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 融云会话列表 -->
+        <activity
+            android:name=".im.ChatListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.cpinfo.familydoctor"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- IM通知消息接收器 -->
+        <receiver
+            android:name=".im.NotificationMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+        <!-- 融云相关页面 end -->
+
+
+        <!-- 极光推送配置2 start -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cpinfo.familydoctor" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.cpinfo.familydoctor" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.cpinfo.familydoctor" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="5febdb4b38ac58436dcc69ff" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+
+        <!-- 极光推送配置2 end -->
+
+
+        <!-- 欢迎界面，启动页 -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/ThemeFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 医生主页面 -->
+        <activity
+            android:name=".activity.doctor.DoctorMainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 病人主页面 -->
+        <activity
+            android:name=".activity.patient.PatientMainActivity"
+            android:launchMode="singleTask" />
+        <!-- 相册，拍照获取图片 -->
+        <activity
+            android:name="com.yanzhenjie.album.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+        <!-- 登录页面 -->
+        <activity android:name=".activity.LoginActivity" />
+        <!-- 健康资讯详情页面 -->
+        <!-- 确认预约挂号信息页面 -->
+        <activity android:name=".activity.patient.CheckRegistrationMsgActivity" />
+        <!-- 用户个人信息页面 -->
+        <activity android:name=".activity.UserInfoActivity" />
+        <!-- 注册页面 -->
+        <activity android:name=".activity.RegisterActivity" />
+        <!-- 用户协议页面 -->
+        <activity android:name=".activity.UserAgreementActivity" />
+        <!-- 临时页面 -->
+        <!-- 选择医院页面 -->
+        <activity android:name=".activity.patient.SignHospitalListActivity" />
+        <!-- 找回（重置）密码 -->
+        <activity android:name=".activity.RetrievePasswordActivity" />
+        <!-- 可选择签约的医生列表页面 -->
+        <activity android:name=".activity.patient.SignTeamListActivity" />
+        <!-- 搜索页面 -->
+        <activity android:name=".activity.SearchActivity" />
+        <!-- 我的挂号列表 -->
+        <activity android:name=".activity.patient.MyRegistrationActivity" />
+        <!-- 我的挂号详情页面 -->
+        <activity android:name=".activity.patient.MyRegistrationDetailActivity" />
+        <!-- 消息通知列表页面 -->
+        <activity android:name=".activity.NotificationListActivity" />
+        <!-- 评价页面 -->
+        <activity android:name=".activity.patient.EvaluateActivity" />
+        <!-- 预约科室列表页面 -->
+        <activity android:name=".activity.patient.OrderDepartmentActivity" />
+        <!-- 预约医院列表页面 -->
+        <activity android:name=".activity.patient.OrderHospitalListActivity" />
+        <!-- 门诊列表 -->
+        <activity android:name=".activity.patient.OutpatientListActivity" />
+        <!-- 住院列表 -->
+        <activity android:name=".activity.patient.HospitalizedListActivity" />
+        <!-- 家庭档案 -->
+        <activity android:name=".activity.patient.FamilyListActivity" />
+        <!-- 检验报告列表 -->
+        <activity android:name=".activity.patient.ExamineListActivity" />
+        <!-- 检查列表 -->
+        <activity android:name=".activity.patient.InspectionListActivity" />
+        <!-- 传染病 -->
+        <activity android:name=".activity.patient.ContagionReportActivity" />
+        <!-- 预约挂号结果反馈页面 -->
+        <activity android:name=".activity.patient.OrderResultActivity" />
+        <!-- 签约团队详情 -->
+        <activity android:name=".activity.patient.SignTeamDetailActivity" />
+        <!-- 账号管理页面 -->
+        <activity android:name=".activity.ModifyPasswordActivity" />
+        <!-- 增加家庭成员页面 -->
+        <activity android:name=".activity.AddFamilyMemberActivity" />
+        <!-- 签约邀请页面 -->
+        <activity android:name=".activity.patient.SignedInvitationActivity" />
+        <!-- 医生个人信息页面 -->
+        <activity android:name=".activity.doctor.DoctorInfoActivity" />
+        <!-- 医生身份认证页面 -->
+        <activity android:name=".activity.doctor.IdentityAuthenticationActivity" />
+        <!-- 关于我们 -->
+        <activity android:name=".activity.AboutUsActivity" />
+        <!-- 医生消息通知详情页面 -->
+        <activity android:name=".activity.doctor.DoctorNoticeDetailActivity" />
+        <!-- 转诊病人详情 -->
+        <activity android:name=".activity.doctor.ReferralPatientDetailActivity" />
+        <!-- 随访病人详情 -->
+        <activity android:name=".activity.doctor.FollowUpPatientDetailActivity" />
+        <!-- 我的病人详情 -->
+        <activity android:name=".activity.doctor.MyPatientDetailActivity" />
+        <!-- 新的病人签约申请页面 -->
+        <activity android:name=".activity.doctor.NewSignedPatientsActivity" />
+        <!-- 医生同意/拒绝签约选择页面 -->
+        <activity android:name=".activity.doctor.SignCheckActivity" />
+        <!-- 医生拒绝签约页面 -->
+        <activity android:name=".activity.doctor.RepulseSignActivity" />
+        <!-- 医生同意签约页面 -->
+        <activity android:name=".activity.doctor.AgreeSignActivity" />
+        <!-- 预签约确认并提交信息页面 -->
+        <activity android:name=".activity.patient.AffirmContractActivity" />
+        <!-- 门诊详情界面 -->
+        <activity android:name=".activity.patient.OutpatientDetailActivity" />
+        <!-- 住院详情页面 -->
+        <activity android:name=".activity.patient.HospitalizedDetailActivity" />
+        <!-- 检查单详情页面 -->
+        <activity android:name=".activity.patient.InspectionDetailActivity" />
+        <!-- 检验报告详情页面 -->
+        <activity android:name=".activity.patient.ExamineDetailActivity" />
+        <!-- 健康体检报告详情页面 -->
+        <activity android:name=".activity.patient.PhysicalDetailActivity" />
+        <!-- 电子病历二级页面（住院历史列表，同档案住院模块二级页面） -->
+        <activity android:name=".activity.patient.PatientHistoryListActivity" />
+        <!-- 电子病历三级页面（住院报告列表） -->
+        <activity android:name=".activity.patient.PatientHistoryReportsActivity" />
+        <!-- 电子病历四级页面（住院报告详情页面） -->
+        <activity android:name=".activity.patient.PatientHistoryReportDetailActivity" />
+        <!-- 确认订单信息支付的页面 -->
+        <activity android:name=".activity.patient.GoPayActivity" />
+        <!-- 已支付，结算告知清单信息页面 -->
+        <activity android:name=".activity.patient.PayInfoActivity" />
+        <!-- 健康体检列表页面 -->
+        <activity android:name=".activity.patient.PhysicalListActivity" />
+        <activity android:name=".activity.patient.ExtensionContractActivity" />
+        <activity android:name=".activity.patient.PayActivity" />
+        <activity android:name=".activity.patient.OrderActivity" />
+        <activity android:name=".activity.patient.NewsWebActivity" />
+        <activity android:name=".activity.patient.QueueCallActivity" />
+        <activity android:name=".activity.patient.NoopsycheGuidanceActivity" />
+        <activity android:name=".activity.patient.SelectHospitalActivity" />
+        <activity android:name=".activity.patient.SelectDepartmentActivity" />
+        <activity android:name=".activity.patient.SelectDoctorActivity" />
+        <activity android:name=".activity.patient.DoctorIntroduceActivity" />
+        <activity android:name=".activity.patient.OrderAffirmActivity" />
+        <activity android:name=".activity.patient.MyFamilyActivity" />
+        <activity android:name=".activity.patient.HospitalNavigationActivity" />
+        <activity android:name=".activity.patient.DepartmentListActivity" />
+        <activity android:name=".activity.patient.BodyGuideDiagnosisActivity" />
+        <activity android:name=".activity.patient.IllnessListActivity" />
+        <activity android:name=".activity.patient.NearHospitalActivity" />
+        <activity android:name=".activity.patient.VisitedHospitalActivity" />
+        <activity android:name=".activity.patient.FamilyRecordActivity" />
+        <activity android:name=".activity.patient.MemberInfoActivity" />
+        <activity android:name=".activity.patient.CloudImageActivity" />
+        <activity android:name=".activity.patient.SetPasswordActivity" />
+        <activity android:name=".activity.patient.AddInfoActivity" />
+        <activity android:name=".activity.patient.HealthInsuranceActivity" />
+        <activity android:name=".activity.patient.CommonWebActivity" />
+        <activity
+            android:name=".activity.patient.VideoActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/ThemeFullscreen" />
+        <activity android:name=".activity.patient.RecordMsgListActivity" />
+        <activity android:name=".activity.patient.MedicalRecordListActivity" />
+        <activity android:name=".activity.patient.ContractEvaluationListActivity" />
+        <activity android:name=".activity.patient.TwoWayReferralListActivity" />
+        <activity android:name=".activity.patient.BeforehandContractDetailActivity" />
+        <activity android:name=".activity.patient.ContractRecordActivity" />
+        <activity android:name=".activity.patient.ResolutiveContractActivity" />
+        <activity android:name=".activity.patient.ExtensionContract2Activity" />
+        <activity android:name=".activity.patient.ExtensionContractDetailActivity" />
+        <activity android:name=".activity.patient.FamilyMemberActivity" />
+        <activity android:name=".activity.patient.SpecialistInfoListActivity" />
+        <activity android:name=".activity.patient.HadSignDetailActivity" />
+        <activity android:name=".activity.patient.SpecialistDetailActivity" />
+        <activity android:name=".activity.patient.AnnouncementMsgListActivity" />
+        <activity android:name=".activity.patient.EvaluateMsgListActivity" />
+        <activity android:name=".activity.patient.AnnouncementDetailActivity" />
+        <activity android:name=".activity.patient.NotificationEvaluateActivity" />
+        <activity android:name=".activity.patient.ReferralDetailActivity" />
+        <activity android:name=".activity.patient.FamilyMessageActivity" />
+        <provider
+            android:name=".utils.common.UpdateApkFileProvider"
+            android:authorities="com.cpinfo.familydoctor.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.patient.SubmitAdviceActivity" />
+        <activity
+            android:name=".activity.patient.ShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.patient.CitizenCardActivity" />
+        <activity android:name=".activity.patient.FamilyAddressActivity"></activity>
+        <activity android:name=".activity.patient.AddInfoPerfectActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.patient.AffirmContractActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/light_blueA400">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="确认签约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@drawable/circular_corner_green"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_4"
+            android:text="提交"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/modify_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="姓名"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="性别"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_census_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="居民类型"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/census_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="手机号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_identity_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="身份证号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/identity_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sign_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="签约时间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/sign_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sign_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="年份"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/sign_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sign_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="签约类型"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/sign_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:text="团队签约"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sign_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="签约来源"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/sign_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:text="移动签约"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_sign_combo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="签约套餐"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/sign_combo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="end"
+                    android:text="健康套餐"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_patient_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="人群分类"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:text="一般人群"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_chronic_disease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="慢性病"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/chronic_disease"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="所在乡镇"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_address1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="街道"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_address2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_address3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottom_white_grey_switcher"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="门牌路巷"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/patient_address3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="end"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

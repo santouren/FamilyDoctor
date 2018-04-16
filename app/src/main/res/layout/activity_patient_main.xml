@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:monkey="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cpinfo.familydoctor.activity.doctor.DoctorMainActivity">
+
+    <!--内容视图-->
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_page"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <include layout="@layout/common_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <RadioGroup
+                android:id="@+id/rg_pages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--首页-->
+                <RadioButton
+                    android:id="@+id/user_home"
+                    style="@style/main_btn_style"
+                    android:drawableTop="@drawable/home_icon_selector"
+                    android:text="@string/rb_home" />
+                <!--用户-->
+                <RadioButton
+                    android:id="@+id/user_mine"
+                    style="@style/main_btn_style"
+                    android:drawableTop="@drawable/mine_icon_selector"
+                    android:text="@string/rb_mine" />
+                <!--用户预约-->
+                <!--<RadioButton-->
+                <!--android:id="@+id/user_order"-->
+                <!--style="@style/main_btn_style"-->
+                <!--android:drawableTop="@drawable/order_icon_selector"-->
+                <!--android:text="@string/rb_order" />-->
+                <!--用户缴费-->
+                <!--<RadioButton-->
+                <!--android:id="@+id/user_pay"-->
+                <!--style="@style/main_btn_style"-->
+                <!--android:drawableTop="@drawable/order_icon_selector"-->
+                <!--android:text="@string/rb_pay" />-->
+                <!--用户健康档案-->
+                <RadioButton
+                    android:id="@+id/user_record"
+                    style="@style/main_btn_style"
+                    android:drawableTop="@drawable/record_icon_selector"
+                    android:text="@string/rb_record" />
+                <!--用户宣教-->
+                <RadioButton
+                    android:id="@+id/user_publicity"
+                    style="@style/main_btn_style"
+                    android:drawableTop="@drawable/publicity_icon_selector"
+                    android:text="@string/rb_publicity" />
+            </RadioGroup>
+
+            <com.cpinfo.familydoctor.widget.DragBubbleView
+                android:id="@+id/unreadLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                monkey:bubbleColor="#ff0000"
+                monkey:bubbleRadius="10dp"
+                monkey:textColor="#ffffff"
+                monkey:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--左侧导航菜单-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/patient_left_menu_header" />
+
+</android.support.v4.widget.DrawerLayout>

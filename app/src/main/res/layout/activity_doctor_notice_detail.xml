@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.doctor.DoctorNoticeDetailActivity">
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="关于2017年医师资格考试网上报名的通知"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subhead" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:text="    关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知关于2017年医师资格考试网上报名的通知..." />
+</LinearLayout>

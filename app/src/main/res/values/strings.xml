@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">淳医点点通</string>
+    <string name="app_version">淳医点点通：V1.0.7</string>
+    <string name="about_us">\u3000\u3000淳医点点通APP是一款面向淳安县内居民的移动医疗应用APP，针对县内居民提供全县医疗数据的便民查询，为患者提供全方位就医服务。通过淳医点点通，患者不仅自己能够随时随地进行预约挂号、查询健康档案、查询门诊处方、排队叫号，还能绑定家人帮家人进行预约挂号，查询家人的健康档案，更方便的关注家人健康。除此之外，淳医点点通提供全科签约服务，帮助居民与全科医生之间形成一对一的契约关系。可与签约医生进行电话问诊、查询就诊记录、转诊记录以及对签约服务进行满意度评价。在淳医点点通上，还能查看疾病知识，获取最新的医保政策和专家坐诊信息。</string>
+    <string name="rb_home">首页</string>
+    <string name="rb_mine">家庭医生</string>
+    <string name="rb_publicity">宣教</string>
+    <string name="rb_kpi">KPI</string>
+    <string name="rb_order">预约</string>
+    <string name="rb_pay">缴费</string>
+    <string name="rb_notice">通知</string>
+    <string name="rb_chat">消息</string>
+    <string name="rb_record">健康档案</string>
+    <string name="rb_answers">问答</string>
+    <string name="doctor_entrance">我是医生</string>
+    <string name="patient_entrance">我是居民</string>
+
+    <string-array name="photo_selector">
+        <item>打开相机拍摄</item>
+        <item>打开相册选择</item>
+        <item>取消</item>
+    </string-array>
+
+    <!-- 预约挂号医院ID -->
+    <string-array name="hospitalID">
+        <!--淳安县第一人民医院-->
+        <item>http://192.46.193.11:8999/MediInfoHis.svc?wsdl</item>
+        <!--淳安县第二人民医院-->
+        <item>http://200.200.10.34:8999/MediInfoHis.svc?wsdl</item>
+        <!--淳安县中医院-->
+        <item>http://192.46.193.18:8999/MediInfoHis.svc?wsdl</item>
+        <!--淳安县妇幼保健院-->
+        <item>http://192.168.0.22:8999/MediInfoHis.svc?wsdl</item>
+    </string-array>
+
+    <!--预签约（性别选择）-->
+    <string-array name="sexType">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <!--预签约（居民类型选择）-->
+    <string-array name="censusRegister">
+        <item>城乡居民</item>
+        <item>城镇职工</item>
+    </string-array>
+
+    <!--预签约（人群分类）-->
+    <string-array name="patientType">
+        <!--<item>一般人群</item>-->
+        <item>失独家庭</item>
+        <item>结核病</item>
+        <item>精神疾病</item>
+        <item>孕妇</item>
+        <item>残疾人</item>
+        <item>慢性病</item>
+        <item>困难家庭</item>
+        <item>老年人</item>
+    </string-array>
+
+    <!--预签约（慢性病分类）-->
+    <string-array name="chronicDiseaseType">
+        <item>高血压</item>
+        <item>高血脂</item>
+        <item>糖尿病</item>
+        <item>骨质疏松</item>
+        <item>哮喘</item>
+        <item>肿瘤</item>
+        <item>慢支</item>
+        <item>冠心病</item>
+        <item>脑卒中</item>
+        <item>前列腺</item>
+        <item>肾病</item>
+        <item>COPD</item>
+    </string-array>
+</resources>

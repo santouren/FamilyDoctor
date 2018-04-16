@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cpinfo.familydoctor.activity.RegisterActivity">
+
+    <include layout="@layout/common_error" />
+
+    <FrameLayout
+        android:id="@id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/activity_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey100"
+            android:orientation="vertical">
+
+            <include layout="@layout/common_title_bar" />
+
+            <EditText
+                android:id="@+id/et_card_id"
+                style="@style/register_et_style"
+                android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableLeft="@drawable/card_icon"
+                android:hint="请输入身份证号"
+                android:inputType="number"
+                android:maxLength="18"
+                android:textSize="@dimen/subhead" />
+
+            <EditText
+                android:id="@+id/et_user_name"
+                style="@style/register_et_style"
+                android:drawableLeft="@drawable/name_icon"
+                android:hint="请输入真实姓名"
+                android:textSize="@dimen/subhead" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/register_et_style"
+                android:drawableLeft="@drawable/phone_icon"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textSize="@dimen/subhead" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/register_et_style"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableLeft="@drawable/password_icon"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textSize="@dimen/subhead" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_8">
+
+                <EditText
+                    android:id="@+id/et_verification"
+                    style="@style/register_et_style"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/left_circular_corner_white"
+                    android:drawableLeft="@drawable/verification_icon"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/tv_get_verification"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/right_circular_corner_blue"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    android:text="获取验证码"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/dp_6"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/is_tick"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/dp_6"-->
+            <!--android:src="@drawable/tick_gray" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/user_agreement"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/dp_6"-->
+            <!--android:padding="@dimen/dp_4"-->
+            <!--android:text="已阅读并同意《用户协议》。" />-->
+            <!--</LinearLayout>-->
+
+            <Button
+                android:id="@+id/bt_register"
+                style="@style/primary_btn_style"
+                android:text="立即注册" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:gravity="end"
+                android:text="已有账号，立即登录>>"
+                android:textColor="@color/blue_100" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/result_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/result_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/to_login"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:gravity="center"
+                android:text="恭喜您注册成功！"
+                android:textColor="@color/blue_100"
+                android:textSize="@dimen/title" />
+
+            <Button
+                android:id="@+id/to_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/circular_corner_blue"
+                android:text="立即登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/subhead" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

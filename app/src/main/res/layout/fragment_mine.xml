@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_8">
+
+                <ImageView
+                    android:id="@+id/doctor_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_default_doctor_portrait"
+                    android:scaleType="fitXY" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_weight="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/item1"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="签约医生"
+                            android:textColor="@color/light_blueA400" />
+
+                        <TextView
+                            android:id="@+id/doctor_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/item1"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:gravity="end"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="暂无数据" />
+
+                        <TextView
+                            android:id="@+id/item2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item1"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="签约日期"
+                            android:textColor="@color/light_blueA400" />
+
+                        <TextView
+                            android:id="@+id/signed_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doctor_name"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:layout_toRightOf="@+id/item2"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:gravity="end"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="暂无数据" />
+
+                        <TextView
+                            android:id="@+id/item3"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item2"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="签约年份"
+                            android:textColor="@color/light_blueA400" />
+
+                        <TextView
+                            android:id="@+id/validity_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/signed_date"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:layout_toRightOf="@+id/item2"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:gravity="end"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="暂无数据" />
+
+                        <TextView
+                            android:id="@+id/item4"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item3"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="医院名称"
+                            android:textColor="@color/light_blueA400" />
+
+                        <TextView
+                            android:id="@+id/hospital_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/validity_date"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:layout_toRightOf="@+id/item2"
+                            android:background="@drawable/bottom_grey_content_white"
+                            android:gravity="end"
+                            android:lines="1"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="暂无数据" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item4"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/extension"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_contract"
+                                android:gravity="center_vertical"
+                                android:padding="6dp"
+                                android:text="预签约"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/family"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_member"
+                                android:gravity="center_vertical"
+                                android:padding="6dp"
+                                android:text="家人"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/unsigned_mark"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="30dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_unsigned" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <LinearLayout
+                android:id="@+id/user_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/notification" />
+
+                <ViewFlipper
+                    android:id="@+id/notification_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:flipInterval="3000"
+                    android:inAnimation="@anim/translate_vertical_in"
+                    android:outAnimation="@anim/translate_vertical_out" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_8"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/call1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/video_call" />
+
+                <TextView
+                    android:id="@+id/ask_type1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/call1"
+                    android:text="视频问诊"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/ask_describe1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ask_type1"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/call1"
+                    android:text="医生在线进行视频诊断和处方下达"
+                    android:textSize="@dimen/caption" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="center"
+                    android:text="发起视频"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_8"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/call2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/describe_call" />
+
+                <TextView
+                    android:id="@+id/ask_type2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/call2"
+                    android:text="问问医生"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:id="@+id/ask_describe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ask_type2"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/call2"
+                    android:text="通过图片，文字和语音和医生在线问诊"
+                    android:textSize="@dimen/caption" />
+
+                <TextView
+                    android:id="@+id/im_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:drawableRight="@drawable/goto_gray"
+                    android:gravity="center"
+                    android:text="在线问诊"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/red_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/im_chat"
+                    android:src="@drawable/red_point"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/start_phone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/dp_8"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="@dimen/dp_8">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/call3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/phone_call" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/ask_type3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/dp_8"-->
+            <!--android:layout_toRightOf="@+id/call3"-->
+            <!--android:text="电话问诊"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/subhead" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/ask_describe3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/ask_type3"-->
+            <!--android:layout_marginLeft="@dimen/dp_8"-->
+            <!--android:layout_toRightOf="@+id/call3"-->
+            <!--android:drawableRight="@drawable/goto_gray"-->
+            <!--android:text="预约医生，和医生进行15分钟电话问诊"-->
+            <!--android:textSize="@dimen/caption" />-->
+
+            <!--</RelativeLayout>-->
+
+            <LinearLayout
+                android:id="@+id/start_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableStart="@drawable/phone_call"
+                    android:gravity="center"
+                    android:text="电话问诊"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/goto_gray"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="end"
+                    android:text="签约医生进行电话问诊"
+                    android:textSize="@dimen/caption" />
+            </LinearLayout>
+
+            <include layout="@layout/common_line_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/medical_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableStart="@drawable/ic_medical_record"
+                    android:gravity="center"
+                    android:text="就诊记录"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/goto_gray"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="end"
+                    android:text="签约医生就诊记录"
+                    android:textSize="@dimen/caption" />
+            </LinearLayout>
+
+            <include layout="@layout/common_line_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/two_way_referral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableStart="@drawable/ic_two_way_referral"
+                    android:gravity="center"
+                    android:text="双向转诊"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/goto_gray"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="end"
+                    android:text="查询我的转诊信息"
+                    android:textSize="@dimen/caption" />
+            </LinearLayout>
+
+            <include layout="@layout/common_line_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/contract_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableStart="@drawable/ic_contract_evaluation"
+                    android:gravity="center"
+                    android:text="签约评价"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/goto_gray"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="end"
+                    android:text="签约团队满意度评价"
+                    android:textSize="@dimen/caption" />
+            </LinearLayout>
+
+            <include layout="@layout/common_bar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_blueA400" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="健康宣传视频"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subhead" />
+            </LinearLayout>
+
+            <include layout="@layout/common_line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/health_video_1"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_health_video_1" />
+
+                <ImageView
+                    android:id="@+id/health_video_2"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_health_video_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/health_video_3"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_health_video_3" />
+
+                <ImageView
+                    android:id="@+id/health_video_4"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_health_video_4" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
