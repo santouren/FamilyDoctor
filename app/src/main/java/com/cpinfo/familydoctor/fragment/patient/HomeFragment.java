@@ -12,7 +12,6 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,14 +108,21 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView cloudInspection;
     @BindView(R.id.family_record)
     TextView familyRecord;
-    @BindView(R.id.family_doctor)
-    ImageView familyDoctor;
     @BindView(R.id.more_health_news)
     LinearLayout moreHealthNews;
-    @BindView(R.id.to_hz_health)
-    ImageView toHzHealth;
-    @BindView(R.id.to_hz_smk)
-    ImageView toHzSmk;
+
+    @BindView(R.id.family_doctor)
+    ImageView familyDoctor;
+
+    @BindView(R.id.to_hz_mzjksc)
+    ImageView to_hz_mzjksc;
+    @BindView(R.id.to_hz_sydj)
+    ImageView to_hz_sydj;
+    @BindView(R.id.to_hz_zsjysp)
+    ImageView to_hz_zsjysp;
+    @BindView(R.id.to_hz_yjff)
+    ImageView to_hz_yjff;
+
     @BindView(R.id.news_cover1)
     ImageView newsCover1;
     @BindView(R.id.news_cover2)
@@ -250,8 +256,12 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         familyDoctor.setOnClickListener(this);
         notificationMsg.setOnClickListener(this);
         moreHealthNews.setOnClickListener(this);
-        toHzHealth.setOnClickListener(this);
-        toHzSmk.setOnClickListener(this);
+
+        to_hz_mzjksc.setOnClickListener(this);
+        to_hz_sydj.setOnClickListener(this);
+        to_hz_zsjysp.setOnClickListener(this);
+        to_hz_yjff.setOnClickListener(this);
+
         hospital_1.setOnClickListener(this);
         hospital_2.setOnClickListener(this);
         hospital_3.setOnClickListener(this);
@@ -295,13 +305,34 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             //左侧导航栏
             EventBus.getDefault().post(new MessageEvent(MessageChars.OPEN_LEFT_MENU));
             return;
-        } else if (v.getId() == R.id.to_hz_health) {
+        } else if (v.getId() == R.id.to_hz_mzjksc) {
+            // 母子健康手册 - 杭州健康通
             doStartApplicationWithPackageName("com.hzhealth.medicalcare");
             return;
-        } else if (v.getId() == R.id.to_hz_smk) {
-            doStartApplicationWithPackageName("com.smk");
+        } else if (v.getId() == R.id.to_hz_sydj) {
+            // 生育登记
+            String phone = SPUtils.getString(getContext(), AppConstants.PATIENT_PHONE, "");
+            String link = "http://fds.qdhws.gov.cn:8891/dologin.do?method=login_wx&apptype=ca&mobile=" + phone;
+            // Toast.makeText(mActivity, link, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(mActivity, NewsWebActivity.class);
+            intent.putExtra("title", "生育登记");
+            intent.putExtra("link", link);
+            startActivity(intent);
             return;
-        } else if (v.getId() == R.id.more_health_news) {
+        }else if (v.getId() == R.id.to_hz_zsjysp) {
+            // 再生育审批
+            // 点击后提示：该功能暂未开放，敬请期待！
+            Toast.makeText(mActivity, "该功能暂未开放，敬请期待！", Toast.LENGTH_SHORT).show();
+            return;
+        }else if (v.getId() == R.id.to_hz_yjff) {
+            // 药具发放
+            Intent intent = new Intent(mActivity, NewsWebActivity.class);
+            intent.putExtra("title", "药具发放");
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:8891/newindex.do?method=yjff");
+            startActivity(intent);
+            return;
+        }
+        else if (v.getId() == R.id.more_health_news) {
             ((PatientMainActivity) getActivity()).toPublicityModule();
             return;
         } else if (v.getId() == R.id.hospital_1) {

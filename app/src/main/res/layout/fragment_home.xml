@@ -274,7 +274,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/temp_ad1" />
+                    android:src="@drawable/temp_ad1"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/to_hz_mzjksc"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mzjksc" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -282,20 +290,35 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/to_hz_health"
+                        android:id="@+id/to_hz_sydj"
                         android:layout_width="0dp"
                         android:layout_height="80dp"
                         android:layout_weight="1"
                         android:scaleType="fitXY"
-                        android:src="@drawable/temp_ad2" />
+                        android:src="@drawable/sydj" />
 
-                    <ImageView
-                        android:id="@+id/to_hz_smk"
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="80dp"
                         android:layout_weight="1"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/temp_ad3" />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/to_hz_zsjysp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/zsjsp" />
+
+                        <ImageView
+                            android:id="@+id/to_hz_yjff"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/yjff" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
