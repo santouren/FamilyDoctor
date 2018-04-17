@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,10 +27,8 @@ import com.cpinfo.familydoctor.activity.patient.AddInfoActivity;
 import com.cpinfo.familydoctor.activity.patient.BeforehandContractDetailActivity;
 import com.cpinfo.familydoctor.activity.patient.ContractEvaluationListActivity;
 import com.cpinfo.familydoctor.activity.patient.ExtensionContract2Activity;
-import com.cpinfo.familydoctor.activity.patient.ExtensionContractActivity;
 import com.cpinfo.familydoctor.activity.patient.ExtensionContractDetailActivity;
 import com.cpinfo.familydoctor.activity.patient.FamilyMemberActivity;
-import com.cpinfo.familydoctor.activity.patient.FamilyRecordActivity;
 import com.cpinfo.familydoctor.activity.patient.HadSignDetailActivity;
 import com.cpinfo.familydoctor.activity.patient.MedicalRecordListActivity;
 import com.cpinfo.familydoctor.activity.patient.SignHospitalListActivity;
@@ -46,18 +43,12 @@ import com.cpinfo.familydoctor.http.ApiRequestManager;
 import com.cpinfo.familydoctor.http.RequestCallBack;
 import com.cpinfo.familydoctor.utils.CommonUtils;
 import com.cpinfo.familydoctor.utils.SPUtils;
-import com.sunfusheng.marqueeview.MarqueeView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
-import io.rong.callkit.RongCallKit;
-import io.rong.imkit.RongIM;
 
 /**
  * Created by Juna on 2017/3/4.
@@ -114,6 +105,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     ImageView healthVideo3;//健康宣传视频
     @BindView(R.id.health_video_4)
     ImageView healthVideo4;//健康宣传视频
+    @BindView(R.id.health_video_5)
+    ImageView healthVideo5;//健康宣传视频
+    @BindView(R.id.health_video_6)
+    ImageView healthVideo6;//健康宣传视频
 
     private String hasSigned;//是否已签约医生
     private Boolean isLogin;//是否已登录
@@ -169,6 +164,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         healthVideo2.setOnClickListener(this);
         healthVideo3.setOnClickListener(this);
         healthVideo4.setOnClickListener(this);
+        healthVideo5.setOnClickListener(this);
+        healthVideo6.setOnClickListener(this);
         notificationMsg.setOnClickListener(this);
     }
 
@@ -256,24 +253,40 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.health_video_1) {
-            //健康宣传视频
+            // 浙江省项目宣传动画视频
             Intent intent = new Intent(mActivity, VideoActivity.class);
-            intent.putExtra("link", "http://122.224.116.84:9898/fds_bak/movie/gjjbggwsxc.mp4");
+            // intent.putExtra("link", "http://122.224.116.84:9898/fds_bak/movie/gjjbggwsxc.mp4");
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:9898/fds_bak/movie/zjsxmxcdhsp.mp4");
             startActivity(intent);
             return;
         } else if (v.getId() == R.id.health_video_2) {
+            // 世界家庭医生日
             Intent intent = new Intent(mActivity, VideoActivity.class);
             intent.putExtra("link", "http://122.224.116.84:9898/fds_bak/movie/sjjtysxcp.mp4");
             startActivity(intent);
             return;
         } else if (v.getId() == R.id.health_video_3) {
+            // 国家基本公共卫生宣传
             Intent intent = new Intent(mActivity, VideoActivity.class);
-            intent.putExtra("link", "http://122.224.116.84:9898/fds_bak/movie/zjsjbggwsfw.mp4");
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:9898/fds_bak/movie/gjjbggwsxc.mp4\n");
             startActivity(intent);
             return;
         } else if (v.getId() == R.id.health_video_4) {
+            // 浙江省基本公共卫生服务项目
             Intent intent = new Intent(mActivity, VideoActivity.class);
-            intent.putExtra("link", "http://122.224.116.84:9898/fds_bak/movie/gjjbggwsfwxm.mp4");
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:9898/fds_bak/movie/zjsjbggwsfw.mp4");
+            startActivity(intent);
+            return;
+        }else if (v.getId() == R.id.health_video_5) {
+            // 药具中心宣传一
+            Intent intent = new Intent(mActivity, VideoActivity.class);
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:9898/fds_bak/movie/yjzxxc_one.mp4");
+            startActivity(intent);
+            return;
+        }else if (v.getId() == R.id.health_video_6) {
+            // 药具中心宣传二
+            Intent intent = new Intent(mActivity, VideoActivity.class);
+            intent.putExtra("link", "http://fds.qdhws.gov.cn:9898/fds_bak/movie/yjzxxc_two.mp4");
             startActivity(intent);
             return;
         }
