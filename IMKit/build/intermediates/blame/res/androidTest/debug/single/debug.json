@@ -8,12 +8,12 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/layout/rc_ext_emoticon_tab_container.xml"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable_rc_sel_picsel_toolbar_back.xml.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable/rc_sel_picsel_toolbar_back.xml"
-    },
-    {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u2615.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u2615.png"
+    },
+    {
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable_rc_sel_picsel_toolbar_back.xml.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable/rc_sel_picsel_toolbar_back.xml"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_mebmer_delete.png.flat",
@@ -152,12 +152,12 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ic_volume_1.png"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_file_icon_video.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_file_icon_video.png"
-    },
-    {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f615.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f615.png"
+    },
+    {
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_file_icon_video.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_file_icon_video.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_ic_def_msg_portrait.png.flat",
@@ -232,12 +232,12 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable/rc_an_voice_sent.xml"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_file_icon_audio.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_file_icon_audio.png"
-    },
-    {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_notification_network_available.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_notification_network_available.png"
+    },
+    {
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_file_icon_audio.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_file_icon_audio.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/layout_rc_picsel_grid_camera.xml.flat",
@@ -292,16 +292,16 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f381.png"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/layout_rc_ac_file_manager.xml.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/layout/rc_ac_file_manager.xml"
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f635.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f635.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_file_icon_picture.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_file_icon_picture.png"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f635.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f635.png"
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/layout_rc_ac_file_manager.xml.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/layout/rc_ac_file_manager.xml"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_ic_bubble_white.9.png.flat",
@@ -340,12 +340,12 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_default_group_portrait.png"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f46b.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f46b.png"
-    },
-    {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/layout_rc_item_file_message.xml.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/layout/rc_item_file_message.xml"
+    },
+    {
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f46b.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f46b.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f60a.png.flat",
@@ -460,20 +460,20 @@
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/layout/rc_dialog_popup_options.xml"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f44a.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f44a.png"
-    },
-    {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_selector_title_pic_back_press.9.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_selector_title_pic_back_press.9.png"
     },
     {
-        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_ext_locator.png.flat",
-        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ext_locator.png"
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_u1f44a.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/u1f44a.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_edit_text_background_hover.9.png.flat",
         "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_edit_text_background_hover.9.png"
+    },
+    {
+        "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_ext_locator.png.flat",
+        "source": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/rc_ext_locator.png"
     },
     {
         "merged": "/Users/Ashin/Workspace_AS/Cpinfo/FamilyDoctor/IMKit/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_rc_cs_button_bg_hover.png.flat",
